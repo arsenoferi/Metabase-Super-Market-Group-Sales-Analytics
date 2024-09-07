@@ -1,0 +1,92 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+      POSTGRES_DB: metabase_db  # Initial database (needed for container startup)
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    networks:
+      - backend
+
+  metabase:
+    image: metabase/metabase
+    container_name: metabase
+    environment:
+      MB_DB_TYPE: postgres
+      MB_DB_DBNAME: metabase_db
+      MB_DB_PORT: 5432
+      MB_DB_USER: postgres
+      MB_DB_PASS: postgrespassword
+      MB_DB_HOST: postgres_db
+    volumes:
+      - ./metabase:/metabase-data
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+    networks:
+      - backend
+
+  superset:
+    image: apache/superset
+    container_name: superset
+    environment:
+      SUPERSET_ENV: production
+      SUPERSET_SECRET_KEY: 'supersecretkey'
+      SUPERSET_DATABASE_URI: postgresql://postgres:postgrespassword@postgres/superset_db
+      ADMIN_USERNAME: admin
+      ADMIN_FIRSTNAME: Superset
+      ADMIN_LASTNAME: Admin
+      ADMIN_EMAIL: admin@superset.com
+      ADMIN_PASSWORD: adminpassword
+    volumes:
+      - ./superset:/var/lib/superset
+    ports:
+      - "8088:8088"
+    depends_on:
+      - postgres
+    networks:
+      - backend
+      
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: jupyter
+    environment:
+      JUPYTER_TOKEN: mysecuretoken  # To secure your notebook access
+    volumes:
+      - ./jupyter:/home/jovyan/work  # This will map the local folder `./jupyter` to the Jupyter work directory.
+    ports:
+      - "8888:8888"  # Exposing the default Jupyter port
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
