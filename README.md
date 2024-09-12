@@ -7,7 +7,7 @@
 
 # Services that we used to created this project
 
-###This project used docker with 4 services :
+### This project used docker with 4 services :
 1. Jupyter Notebook -> Create ETL from excel file to Database
 2. Pgadmin -> Manage postgress
 3. Postgress -> Our Database
