@@ -1,0 +1,10 @@
+# Important Docker Command
+
+## Activate Container :
+docker-compose up -d
+  
+## Remove Container :
+docker-compose down
+
+## Access Specific Docker Container Terminal :
+docker exec -it superset /bin/bash
