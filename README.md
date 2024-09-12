@@ -33,5 +33,15 @@
 
 ![Product Overview](Image/Product_Overview.png)
 
-Most customer care with environment but not their healthy because we can see 53% recycle product contribute to total sales but only 35% low fat contribute to total sales 
+Most customers care about the environment but not their health, as 53% of sales come from recycled products, while only 35% come from low-fat products. 
+
+## Customer Overview :
+
+![Customer Overview](Image/Customer_Analysis.png)
+
+1. Membership program not effective for customers with income between $10K - $30K/year.
+2. Bronze membership is the most effective membership program
+3. US Customer is the most contribut to the revenue
+4. Customer education had negative correlation in revenue
+5. The professional customer category has the most significant impact on revenue.
 
