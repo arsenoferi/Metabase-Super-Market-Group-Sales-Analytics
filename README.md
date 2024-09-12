@@ -24,5 +24,14 @@
 
 ## Company Overview :
 
-![Company Overview]("Image/Company Overview.png")
+![Company Overview](Image/Company_Overview.png)
+
+1. Based on the picture, there is a significant move in November.
+2. Based on the picture, the brand contributing the most to revenue and profit is Hermanos. However, in terms of quantity sold, Hermanos is not the highest-selling brand.
+
+## Product Overview:
+
+![Product Overview](Image/Product_Overview.png)
+
+Most customer care with environment but not their healthy because we can see 53% recycle product contribute to total sales but only 35% low fat contribute to total sales 
 
