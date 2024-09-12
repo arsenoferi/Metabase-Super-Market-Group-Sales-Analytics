@@ -56,7 +56,7 @@ Most customers care about the environment but not their health, as 53% of sales 
 3. Deluxe Supermarket and Super Supermarket had better performance than others.
 
 
-# Strategic Purposes
+# Strategic Proposed
 
 1. Add more stores in Canada because it has better potential than other countries. However, Canada currently has the fewest number of stores.
 2. We should push promotions for the bronze membership because the bronze membership has made a significant contribution to the revenue
