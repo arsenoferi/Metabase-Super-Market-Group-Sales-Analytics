@@ -22,7 +22,7 @@
 2. Dataframe will be load to database
 3. Metabase will be read data from database
 
-# Explanation from the data
+# Explanation from the data :
 
 ## Company Overview :
 
