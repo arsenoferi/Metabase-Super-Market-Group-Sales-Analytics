@@ -45,3 +45,21 @@ Most customers care about the environment but not their health, as 53% of sales 
 4. Customer education had negative correlation in revenue
 5. The professional customer category has the most significant impact on revenue.
 
+## Store Overview :
+
+![Store Overview](Image/Store_Analysis.png)
+
+1. The best store is Store 12
+2. The USA store contributed the most revenue, but the best performance compared to average revenue came from the store in Canada.
+3. Deluxe Supermarket and Super Supermarket had better performance than others.
+
+
+# Strategic Purposes
+
+1. Add more stores in Canada because it has better potential than other countries. However, Canada currently has the fewest number of stores.
+2. We should push promotions for the bronze membership because the bronze membership has made a significant contribution to the revenue
+3. We should focus on customers with lower levels of education because they have contributed the most to our revenue.
+4. Please add a more environmentally friendly brand to the list because our client cares about the environment.
+
+
+
