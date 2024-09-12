@@ -6,4 +6,11 @@
 5. open : http://localhost:3000/ in your browser
 
 # Services that we used to created this project
-![Alt text](https://github.com/arsenoferi/Metabase-Super-Market-Group-Sales-Analytics/tree/main/Image/Read.png)
+
+###This project used docker with 4 services :
+1. Jupyter Notebook -> Create ETL from excel file to Database
+2. Pgadmin -> Manage postgress
+3. Postgress -> Our Database
+4. Metabase -> Our BI Tools
+
+![Services Flow](Image/Read.png)
