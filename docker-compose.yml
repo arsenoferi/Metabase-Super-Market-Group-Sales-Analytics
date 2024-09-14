@@ -4,6 +4,7 @@ services:
   postgres:
     image: postgres:13
     container_name: postgres_db
+    user: root
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgrespassword

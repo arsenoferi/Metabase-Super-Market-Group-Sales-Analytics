@@ -1,3 +1,0 @@
-nyalain docker --> docker-compose up -d
-kalo udah beres --> docker-compose down
-kalo butuh akses specific terminal --> docker exec -it superset /bin/bash
